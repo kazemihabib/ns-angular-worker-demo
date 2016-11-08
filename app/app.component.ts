@@ -9,6 +9,9 @@ export class AppComponent {
     public worker;
     constructor(){
         this.worker = new Worker('./worker');
+        this.worker.onmessage = (msg) =>{
+            console.log('data ',msg.data);
+        }
     }
     public counter: number = 16;
 

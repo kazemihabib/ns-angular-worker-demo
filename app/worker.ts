@@ -1,9 +1,8 @@
-// declare var postMessage:any;
-var globals = require("globals");
+require("globals");
 import {hello} from "./testClass";
+global.onmessage = (msg)=> {
 
-onmessage = (msg)=> {
-
-    console.log('in Worker onmessage: ',msg.data);
-    console.log(hello());
+   console.log('in Worker onmessage: ',msg.data);
+   console.log(hello());
+   global.postMessage('hey this is from worker');
 };

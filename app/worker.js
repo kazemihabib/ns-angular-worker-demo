@@ -1,9 +1,9 @@
 "use strict";
-// declare var postMessage:any;
-var globals = require("globals");
+require("globals");
 var testClass_1 = require("./testClass");
-onmessage = function (msg) {
+global.onmessage = function (msg) {
     console.log('in Worker onmessage: ', msg.data);
     console.log(testClass_1.hello());
+    global.postMessage('hey this is from worker');
 };
 //# sourceMappingURL=worker.js.map

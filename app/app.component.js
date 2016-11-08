@@ -5,6 +5,9 @@ var AppComponent = (function () {
     function AppComponent() {
         this.counter = 16;
         this.worker = new Worker('./worker');
+        this.worker.onmessage = function (msg) {
+            console.log('data ', msg.data);
+        };
     }
     Object.defineProperty(AppComponent.prototype, "message", {
         get: function () {
