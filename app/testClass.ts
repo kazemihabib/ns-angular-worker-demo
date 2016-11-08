@@ -1,5 +1,3 @@
-export class testClass{
-    public hello(){
-            console.log('hello method');
-        }
+export function hello(){
+    return "habib";
 }

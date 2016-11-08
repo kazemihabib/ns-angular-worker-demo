@@ -1,14 +1,13 @@
 import {Component} from "@angular/core";
-import {MyService} from './worker.service';
+import {hello} from "./testClass";
 
 @Component({
     selector: "my-app",
     templateUrl: "app.component.html",
-    providers:[MyService]
 })
 export class AppComponent {
     public worker;
-    constructor(private myService:MyService){
+    constructor(){
         this.worker = new Worker('./worker');
     }
     public counter: number = 16;
@@ -23,7 +22,8 @@ export class AppComponent {
     
     public onTap() {
         this.counter--;
-        this.myService.sendMessage('hi');
+        console.log('in AppComponent ',hello());
+        this.worker.postMessage('hi');
 
     }
 }

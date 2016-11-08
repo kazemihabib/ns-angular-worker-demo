@@ -1,9 +1,8 @@
 "use strict";
 var core_1 = require("@angular/core");
-var worker_service_1 = require('./worker.service');
+var testClass_1 = require("./testClass");
 var AppComponent = (function () {
-    function AppComponent(myService) {
-        this.myService = myService;
+    function AppComponent() {
         this.counter = 16;
         this.worker = new Worker('./worker');
     }
@@ -21,15 +20,15 @@ var AppComponent = (function () {
     });
     AppComponent.prototype.onTap = function () {
         this.counter--;
-        this.myService.sendMessage('hi');
+        console.log('in AppComponent ', testClass_1.hello());
+        this.worker.postMessage('hi');
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: "my-app",
             templateUrl: "app.component.html",
-            providers: [worker_service_1.MyService]
         }), 
-        __metadata('design:paramtypes', [worker_service_1.MyService])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());

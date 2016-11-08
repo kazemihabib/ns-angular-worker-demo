@@ -1,1 +1,1 @@
-{"version":3,"file":"testClass.js","sourceRoot":"","sources":["testClass.ts"],"names":[],"mappings":";AAAA;IAAA;IAIA,CAAC;IAHU,yBAAK,GAAZ;QACQ,OAAO,CAAC,GAAG,CAAC,cAAc,CAAC,CAAC;IAChC,CAAC;IACT,gBAAC;AAAD,CAAC,AAJD,IAIC;AAJY,iBAAS,YAIrB,CAAA"}
+{"version":3,"file":"testClass.js","sourceRoot":"","sources":["testClass.ts"],"names":[],"mappings":";AAAA;IACI,MAAM,CAAC,OAAO,CAAC;AACnB,CAAC;AAFe,aAAK,QAEpB,CAAA"}

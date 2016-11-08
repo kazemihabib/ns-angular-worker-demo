@@ -1,11 +1,6 @@
 "use strict";
-var testClass = (function () {
-    function testClass() {
-    }
-    testClass.prototype.hello = function () {
-        console.log('hello method');
-    };
-    return testClass;
-}());
-exports.testClass = testClass;
+function hello() {
+    return "habib";
+}
+exports.hello = hello;
 //# sourceMappingURL=testClass.js.map
